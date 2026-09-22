@@ -167,6 +167,17 @@ def cmd_retrieve(args):
         preview = r.text[:52].replace("\n", " ")
         print(f"{i:<3} {r.distance:<10.4f} {r.source:<32} {preview}...")
 
+    # Full inspection view: the complete text of every retrieved chunk,
+    # alongside its source and distance, for manually judging retrieval
+    # quality before touching the cutoff, the chunker, or the prompt.
+    print("\n" + "=" * 100)
+    print("Full retrieved chunks")
+    print("=" * 100)
+    for i, r in enumerate(results, 1):
+        print(f"\n#{i}  distance: {r.distance:.4f}  source: {r.source}")
+        print("-" * 100)
+        print(r.text)
+
     decision = gate.check(results)
     print(f"\nGate: {decision.explanation}")
     print("\nLower is better. 0.3 is a close match, 0.9 is unrelated.")

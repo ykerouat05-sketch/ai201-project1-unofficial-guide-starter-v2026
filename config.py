@@ -40,10 +40,10 @@ TOP_K = 5               # how many chunks to pull back per question
 #
 # LOWER IS BETTER: 0.3 is a close match, 0.9 is unrelated.
 #
-# 0.6 is a reasonable starting point, not a right answer. Milestone 4 has you
-# measure your own two groups of distances and put the cutoff in the gap.
-# Most corpora land somewhere between 0.45 and 0.75.
-THRESHOLD = 0.6
+# 0.6 was the generic starting point. Measured on this corpus: the 5
+# QUESTIONS best distances ranged 0.2730-0.7010, and the 5 OUT_OF_SCOPE best
+# distances ranged 0.8246-0.9340. 0.75 sits in the gap between the two groups.
+THRESHOLD = 0.75
 
 
 # ─── Models ──────────────────────────────────────────────────────────────────

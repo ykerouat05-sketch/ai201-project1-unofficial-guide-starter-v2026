@@ -103,11 +103,12 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
+**Question:** how many times you can change your meal plan?
 
 **Answer:**
 
 ```
+You can change your meal plan tier once (Source: admin_meal_plan_changes.txt).
 ```
 
 **My relevance cutoff:**
